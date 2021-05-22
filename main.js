@@ -23,7 +23,7 @@ client.once('ready', () => {
 });
 
 client.on('message', msg => {
-    if (msg.content.toLowerCase == 'ok' && !msg.author.bot) {
+    if (msg.content.toLowerCase() == 'ok' && !msg.author.bot) {
         client.commands.get('ok').execute(msg);
         return;
     }
@@ -48,5 +48,5 @@ client.on('message', msg => {
 
 // -- Login -- //
 
-client.login('./config.json');
+client.login(config.token);
 // client.destroy();
