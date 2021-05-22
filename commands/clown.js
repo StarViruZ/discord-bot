@@ -1,4 +1,4 @@
-const { Message } = require("discord.js")
+const { Message } = require("discord.js");
 
 module.exports = {
     name: 'clown',
@@ -8,14 +8,14 @@ module.exports = {
         const targetUsr = msg.mentions.users.first();
 
         if(!targetUsr) {
-            msg.channel.send('Target an user u dummy :clown:');
+            msg.channel.reply('Target an user u dummy :clown:');
             return;
         } else {
 
             // grab da role
             let role = msg.guild.roles.cache.find(r => { return r.name === "i identify as a clown 🤡"; });
             if (!role) {
-                msg.channel.send('Clown role doesn\'t exist :sob:');
+                msg.channel.reply('Clown role doesn\'t exist :sob:');
                 return;
             } else {
 
@@ -25,10 +25,10 @@ module.exports = {
                 //     msg.channel.send('You can yeet ppl');
                 if (member.roles.cache.some(r => { return r.name === "i identify as a clown 🤡"; })) {
                     member.roles.remove(role).catch(console.error); // remove da role
-                    msg.channel.send('You can\'t leave us, you are always a clown :clown:');
+                    msg.channel.reply('You can\'t leave us, you are always a clown :clown:');
                 } else {
                     member.roles.add(role).catch(console.error);   
-                    msg.channel.send('Welcome to the clown academy :clown:'); // add da role
+                    msg.channel.reply('Welcome to the clown academy :clown:'); // add da role
                     msg.channel.send('https://tenor.com/view/yghkjg-walking-clown-college-gif-14768929');
                 } 
             }

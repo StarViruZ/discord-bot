@@ -42,6 +42,8 @@ client.on('message', msg => {
             client.commands.get('clown').execute(msg, args);
         else if (cmd == 'mlg')
             client.commands.get('mlg-embed').execute(msg, args, Discord);
+        else if (cmd == 'delet')
+            client.commands.get('delet').execute(msg, args);
 
 });
 
