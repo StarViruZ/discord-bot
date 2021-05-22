@@ -44,6 +44,10 @@ client.on('message', msg => {
             client.commands.get('mlg-embed').execute(msg, args, Discord);
         else if (cmd == 'delet')
             client.commands.get('delet').execute(msg, args);
+        else if (cmd == 'yeet')
+            client.commands.get('kick').execute(msg, args);
+        else if (cmd == 'bonk')
+            client.commands.get('ban').execute(msg, args);
 
 });
 
