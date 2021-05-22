@@ -1,17 +1,24 @@
 {
-  "name": "stupid-ass-discord-bot",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "fs": "^0.0.1-security"
+  },
+  "name": "discord-bot",
+  "description": "",
   "version": "1.0.0",
-  "description": "ur mom",
   "main": "main.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "starviruz"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarViruZ/discord-bot.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "discord.js": "^12.5.3"
-  }
+  "bugs": {
+    "url": "https://github.com/StarViruZ/discord-bot/issues"
+  },
+  "homepage": "https://github.com/StarViruZ/discord-bot#readme"
 }
