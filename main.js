@@ -8,6 +8,8 @@ const prefix = config.prefix;
 
 const fs = require('fs');
 
+const memberCounter = require('./counters/member-counter');
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -20,6 +22,8 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Your mom is alive');
+    memberCounter(client);
+
     client.user.setPresence({ 
         activity: { 
             name: 'you as my bitch' }, 
@@ -65,8 +69,13 @@ client.on('message', msg => {
             client.commands.get('ban').execute(msg, args);
         else if (cmd == 'shut')
             client.commands.get('mute').execute(msg, args);
-        else if (cmd == 'lang-role')
-            client.commands.get('mute').execute(msg, args);
+        else if (cmd == 'langrole')
+            client.commands.get('reactionrole').execute(msg, args, Discord, client);
+        else if (cmd == 'play')
+            client.commands.get('play-music').execute(msg, args, Discord, client);
+        else if (cmd == 'stop')
+            client.commands.get('stop-music').execute(msg, args, Discord, client);
+        
 
 });
 
