@@ -16,10 +16,11 @@
     "type": "git",
     "url": "git+https://github.com/StarViruZ/discord-bot.git"
   },
-  "author": "",
+  "author": "StarViruZ",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StarViruZ/discord-bot/issues"
   },
-  "homepage": "https://github.com/StarViruZ/discord-bot#readme"
+  "homepage": "https://github.com/StarViruZ/discord-bot#readme",
+  "keywords": []
 }
