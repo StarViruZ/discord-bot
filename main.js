@@ -56,5 +56,5 @@ client.on('message', msg => {
 
 // -- Login -- //
 
-client.login(process.env.TOKEN);
+client.login(config.token);
 // client.destroy();
