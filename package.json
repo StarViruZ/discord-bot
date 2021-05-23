@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "discord.js": "^12.5.3",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "ms": "^2.1.3"
   },
   "name": "discord-bot",
   "description": "just me C**** (im StarViruZ but u should already know that duh) learning to code a simple discord bot using discord.js with the help of my good friend T***** (call him Lofty kek) for hosting and supporting all my retardness :P",

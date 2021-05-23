@@ -48,6 +48,8 @@ client.on('message', msg => {
             client.commands.get('kick').execute(msg, args);
         else if (cmd == 'bonk')
             client.commands.get('ban').execute(msg, args);
+        else if (cmd == 'shut')
+            client.commands.get('mute').execute(msg, args);
 
 });
 
