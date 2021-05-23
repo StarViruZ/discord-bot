@@ -20,6 +20,21 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Your mom is alive');
+    client.user.setPresence({ 
+        activity: { 
+            name: 'you as my bitch' }, 
+        status: 'idle' 
+    });  
+});
+
+client.on('guildMemberAdd', guildMember => {
+    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Peasant');
+    guildMember.roles.add(welcomeRole);
+    guildMember.guild.channels.cache.get('845897169243340850').send('A wild LVL ' + (Math.ceil(Math.random() * 100)) + ' <@' + guildMember.user.id + '> appeared! So ugly...');
+});
+
+client.on('guildMemberRemove', guildMember => {
+    guildMember.guild.channels.cache.get('845897169243340850').send('mf <@' + guildMember.user.id + '> left without paying! Bankrupt here we go...');
 });
 
 client.on('message', msg => {
