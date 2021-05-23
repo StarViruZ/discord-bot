@@ -31,7 +31,7 @@ module.exports = {
                     console.log('timer over');
                     target.roles.remove(muteRole.id);
                     target.roles.add(mainRole.id);
-                 }, ms(args[1])); 
+                }, ms(args[1]));
 
             } else {
                 // console.log('unshut');
