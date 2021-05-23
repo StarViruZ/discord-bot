@@ -1,3 +1,3 @@
 module.exports =() =>{
-    console.log('your mom is alive')
+    console.log('Your mom is alive')
 }
