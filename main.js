@@ -2,9 +2,9 @@ const config = require('./config.json');
 
 const Discord = require('discord.js');
 
-const client = new Discord.Client();
+const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
-const prefix = '$';
+const prefix = config.prefix;
 
 const fs = require('fs');
 
@@ -64,6 +64,8 @@ client.on('message', msg => {
         else if (cmd == 'bonk')
             client.commands.get('ban').execute(msg, args);
         else if (cmd == 'shut')
+            client.commands.get('mute').execute(msg, args);
+        else if (cmd == 'lang-role')
             client.commands.get('mute').execute(msg, args);
 
 });
