@@ -71,11 +71,6 @@ client.on('message', msg => {
             client.commands.get('mute').execute(msg, args);
         else if (cmd == 'langrole')
             client.commands.get('reactionrole').execute(msg, args, Discord, client);
-        else if (cmd == 'play')
-            client.commands.get('play-music').execute(msg, args, Discord, client);
-        else if (cmd == 'stop')
-            client.commands.get('stop-music').execute(msg, args, Discord, client);
-        
 
 });
 
