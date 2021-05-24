@@ -23,6 +23,10 @@ for(const file of commandFiles) {
 client.once('ready', () => {
     console.log('Your mom is alive');
     memberCounter(client);
+    
+    // This should be running right away to keep the reaction roles working
+    // Also the embed code should be commented to prevent unnecesary spam
+    client.commands.get('reactionrole').execute(null, Discord, client);
 
     client.user.setPresence({ 
         activity: { 
@@ -52,25 +56,30 @@ client.on('message', msg => {
     const args = msg.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
 
-    
-        if (cmd === 'ping')
-            msg.channel.send('Fuck you');
-        else if (cmd == 'pingabitch')
-            client.commands.get('pingabitch').execute(msg);
-        else if (cmd == 'clown')
-            client.commands.get('clown').execute(msg, args);
-        else if (cmd == 'mlg')
-            client.commands.get('mlg-embed').execute(msg, args, Discord);
-        else if (cmd == 'delet')
-            client.commands.get('delet').execute(msg, args);
-        else if (cmd == 'yeet')
-            client.commands.get('kick').execute(msg, args);
-        else if (cmd == 'bonk')
-            client.commands.get('ban').execute(msg, args);
-        else if (cmd == 'shut')
-            client.commands.get('mute').execute(msg, args);
-        else if (cmd == 'langrole')
-            client.commands.get('reactionrole').execute(msg, args, Discord, client);
+    if (cmd === 'ping')
+        msg.channel.send('Fuck you');
+    else if (cmd == 'pingabitch')
+        client.commands.get('pingabitch').execute(msg);
+    else if (cmd == 'clown')
+        client.commands.get('clown').execute(msg, args);
+    else if (cmd == 'mlg')
+        client.commands.get('mlg-embed').execute(msg, args, Discord);
+    else if (cmd == 'delet')
+        client.commands.get('delet').execute(msg, args);
+    else if (cmd == 'yeet')
+        client.commands.get('kick').execute(msg, args);
+    else if (cmd == 'bonk')
+        client.commands.get('ban').execute(msg, args);
+    else if (cmd == 'shut')
+        client.commands.get('mute').execute(msg, args);
+    else if (cmd == 'langrole')
+        // Should be used only if it's needed to send an embed message.
+        // Also the embed code should be not commented in order to do this
+        client.commands.get('reactionrole').execute(msg, Discord, client);
+    else if (cmd == 'play')
+        client.commands.get('play-music').execute(msg, args);
+    else if (cmd == 'leave')
+        client.commands.get('leave-music').execute(msg, args);
 
 });
 

@@ -1,13 +1,18 @@
 module.exports = {
     name: 'reactionrole',
     description: 'React to set a stupid role',
-    async execute(msg, args, Discord, client) {
+    async execute(msg, Discord, client) {
         const rolesChannel = '846146613004206130';
-        const english = msg.guild.roles.cache.find(role => role.name === 'English');
-        const espanol = msg.guild.roles.cache.find(role => role.name === 'Español');
+        const guild = client.guilds.cache.get('844038550684696597');
+
+        // Remove msg. before 'guild' if you don't need send embeds
+        const english = guild.roles.cache.find(role => role.name === 'English');
+        const espanol = guild.roles.cache.find(role => role.name === 'Español');
         const flagus = '🇺🇸';
         const flagmx = '🇲🇽';
 
+        // Use this only if u need to create an embed message in order to manage reactions
+        /*
         const reactionEmbed = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('ROLES')
@@ -20,6 +25,7 @@ module.exports = {
         let msgTarget = await msg.channel.send(reactionEmbed);
         msgTarget.react(flagus);
         msgTarget.react(flagmx);
+        */
 
         // Adding reaction
         client.on('messageReactionAdd', async (reaction, user) => {
