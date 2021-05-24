@@ -2,7 +2,6 @@ module.exports = {
     name: 'leave-music',
     description: 'stop the song cos its cringe',
     async execute(msg, args) {
-        console.log('mom');
         const voiceChannel = msg.member.voice.channel;
 
         if(!voiceChannel)
