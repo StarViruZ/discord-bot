@@ -3,7 +3,7 @@ const { Message } = require("discord.js");
 module.exports = {
     name: 'clown',
     description: 'become one even though you always were one',
-    execute(msg, args) {
+    execute(client, msg, args, Discord) {
 
         const targetUsr = msg.mentions.users.first();
 

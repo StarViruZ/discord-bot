@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'leave-music',
+    name: 'leave',
     description: 'stop the song cos its cringe',
-    async execute(msg, args) {
+    async execute(client, msg, args, Discord) {
         const voiceChannel = msg.member.voice.channel;
 
         if(!voiceChannel)

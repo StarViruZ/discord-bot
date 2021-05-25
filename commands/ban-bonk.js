@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'ban',
+    name: 'bonk',
     description: 'kill these mfs outta existence',
-    execute(msg, args) {
+    execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();
 
         if (member) {

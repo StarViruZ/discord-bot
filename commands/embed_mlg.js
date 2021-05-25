@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'mlg-embed',
+    name: 'mlg',
     description: 'Embed shit with dank memes',
-    execute(msg, args, Discord) {
+    execute(client, msg, args, Discord) {
         const someEmbed = new Discord.MessageEmbed()
             .setColor('#FF4444')
             .setTitle('Sample text (its a link obviously so fucking click here ~~please or i die of 420 quickscope~~ u lvl 2 spear goblin)')

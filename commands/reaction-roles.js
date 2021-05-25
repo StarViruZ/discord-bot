@@ -1,7 +1,8 @@
 module.exports = {
-    name: 'reactionrole',
+    name: 'reaction-roles',
     description: 'React to set a stupid role',
-    async execute(msg, Discord, client) {
+    async execute(client, msg, args, Discord) {
+        console.log('Running reaction roles command');
         const rolesChannel = '846146613004206130';
         const guild = client.guilds.cache.get('844038550684696597');
 

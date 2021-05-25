@@ -2,9 +2,9 @@ const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
 
 module.exports = {
-    name: 'play-music',
+    name: 'play',
     description: 'play shit in youtube lol!',
-    async execute(msg, args) {
+    async execute(client, msg, args, Discord) {
         const voiceChannel = msg.member.voice.channel;
 
         if(!voiceChannel)

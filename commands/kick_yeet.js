@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'kick',
+    name: 'yeet',
     description: 'yeet these mfs',
-    execute(msg, args) {
+    execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();
 
         if (member) {
@@ -12,3 +12,4 @@ module.exports = {
             msg.reply('kicked invisible man lessssssssss gooooo');
     }
 }
+

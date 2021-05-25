@@ -3,7 +3,7 @@ const { Message } = require("discord.js");
 module.exports = {
     name: 'delet',
     description: 'restore balance in the universe',
-    async execute(msg, args) {
+    async execute(client, msg, args, Discord) {
         if(!args[0])
             return msg.reply('Better tell me how many messages should I clear bruh');
         if(isNaN(args[0]))

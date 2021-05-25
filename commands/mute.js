@@ -3,7 +3,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     description: 'shut that mf',
-    async execute(msg, args) {
+    async execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();
 
         if (member) {
