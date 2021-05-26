@@ -17,11 +17,30 @@ client.once('ready', () => {
     // Also the embed code should be commented to prevent unnecesary spam
     client.commands.get('reaction-roles').execute(client, null, null, Discord);
 
-    client.user.setPresence({ 
-        activity: { 
-            name: 'you as my bitch' }, 
-        status: 'idle' 
-    });  
+    const arrayOfStatus = [
+        `In ${client.guilds.cache.size} servers`,
+        `${client.channels.cache.size} channels in total`,
+        `${client.users.cache.size} users accessing the bot`,
+        `stop looking at this status u mad sus ffs`
+    ];
+
+    let index = 0;
+    setInterval(() => {
+        if(index === arrayOfStatus.length)
+            index = 0;
+
+        const status = arrayOfStatus[index];
+        // console.log(status);
+        client.user.setActivity(status);
+        index++;
+    }, 7000);
+
+    /*
+        client.user.setPresence({ 
+            // activity: { name: 'you as my bitch' }, 
+            status: 'idle' 
+        });
+    */  
 });
 
 ['command_handler', 'event_handler'].forEach(handler => {

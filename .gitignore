@@ -1,2 +1,12 @@
+#constants.js only in order to conserver 'Mobile' status
 node_modules/*
+!node_modules/discord.js
+node_modules/discord.js/*
+!node_modules/discord.js/src
+node_modules/discord.js/src/*
+!node_modules/discord.js/src/util
+node_modules/discord.js/src/util/*
+!node_modules/discord.js/src/util/Constants.js
+
+#in order to keep token safe
 config.json
