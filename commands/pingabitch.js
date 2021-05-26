@@ -2,6 +2,7 @@ const { Message } = require("discord.js");
 
 module.exports = {
     name: 'pingabitch',
+    aliases: ['pinglofty'],
     description: 'ping that mf of lofty',
     execute(client, msg, args, Discord) {
 

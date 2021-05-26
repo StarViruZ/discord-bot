@@ -2,6 +2,7 @@ const ms = require('ms');
 
 module.exports = {
     name: 'mute',
+    aliases: ['shut', 'silence'],
     description: 'shut that mf',
     async execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();

@@ -13,13 +13,14 @@ module.exports = (Discord, client, msg) => {
     const args = msg.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
 
-    const command = client.commands.get(cmd);
-    
-    if (command.name === 'ok') return;
-    // Comment this if you don't need embeds since it should be uncommented in the main.js
-    if (command.name === 'reaction-roles') return;
+    const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-    if (command)
+    if (command) {
+        if (command.name === 'ok') return;
+        // Comment this if you don't need embeds since it should be uncommented in the main.js
+        if (command.name === 'reaction-roles') return;
+        
         command.execute(client, msg, args, Discord);
+    }
         
 }

@@ -1,5 +1,6 @@
 module.exports = {
-    name: 'mlg',
+    name: 'embed',
+    aliases: ['mlg', 'mlg-embed'],
     description: 'Embed shit with dank memes',
     execute(client, msg, args, Discord) {
         const someEmbed = new Discord.MessageEmbed()

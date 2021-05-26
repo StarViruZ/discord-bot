@@ -1,7 +1,8 @@
 const { Message } = require("discord.js");
 
 module.exports = {
-    name: 'delet',
+    name: 'delete',
+    aliases: ['delet', 'prune', 'snap'],
     description: 'restore balance in the universe',
     async execute(client, msg, args, Discord) {
         if(!args[0])

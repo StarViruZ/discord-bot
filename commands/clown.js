@@ -2,6 +2,7 @@ const { Message } = require("discord.js");
 
 module.exports = {
     name: 'clown',
+    aliases: ['clownify'],
     description: 'become one even though you always were one',
     execute(client, msg, args, Discord) {
 
