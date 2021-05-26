@@ -9,6 +9,7 @@ const google = new Scraper({
 module.exports = {
     name: 'image',
     aliases: ['img', 'pic', 'google'],
+    cooldown: 10,
     description: 'search a random ass pic',
     async execute(client, msg, args){
         const query = args.join(' ');
