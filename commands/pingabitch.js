@@ -3,6 +3,8 @@ const { Message } = require("discord.js");
 module.exports = {
     name: 'pingabitch',
     aliases: ['pinglofty'],
+    permissions: ["ADMINISTRATOR"],
+    cooldown: 10,
     description: 'ping that mf of lofty',
     execute(client, msg, args, Discord) {
 

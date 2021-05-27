@@ -1,5 +1,7 @@
 module.exports = {
     name: 'reaction-roles',
+    aliases: ['roles'],
+    permissions: ["ADMINISTRATOR"],
     description: 'React to set a stupid role',
     async execute(client, msg, args, Discord) {
         // console.log('Running reaction roles command');

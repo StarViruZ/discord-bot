@@ -3,6 +3,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     aliases: ['shut', 'silence'],
+    permissions: ["KICK_MEMBERS", "BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'shut that mf',
     async execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();

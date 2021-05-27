@@ -1,6 +1,7 @@
 module.exports = {
     name: 'ban',
     aliases: ['bonk', 'hammer'],
+    permissions: ["BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'kill these mfs outta existence',
     execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();

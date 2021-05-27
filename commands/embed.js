@@ -1,6 +1,7 @@
 module.exports = {
     name: 'embed',
     aliases: ['mlg', 'mlg-embed'],
+    permissions: ["MANAGE_MESSAGES", "KICK_MEMBERS", "BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'Embed shit with dank memes',
     execute(client, msg, args, Discord) {
         const someEmbed = new Discord.MessageEmbed()

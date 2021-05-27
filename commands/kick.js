@@ -1,6 +1,7 @@
 module.exports = {
     name: 'kick',
     aliases: ['yeet', 'boot'],
+    permissions: ["KICK_MEMBERS", "ADMINISTRATOR"],
     description: 'yeet these mfs',
     execute(client, msg, args, Discord) {
         const member = msg.mentions.users.first();

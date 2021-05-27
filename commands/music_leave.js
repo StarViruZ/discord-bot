@@ -1,6 +1,7 @@
 module.exports = {
     name: 'leave',
     aliases: ['stop'],
+    cooldown: 5,
     description: 'stop the song cos its cringe',
     async execute(client, msg, args, Discord) {
         const voiceChannel = msg.member.voice.channel;

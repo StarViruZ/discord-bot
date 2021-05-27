@@ -3,6 +3,7 @@ const { Message } = require("discord.js");
 module.exports = {
     name: 'delete',
     aliases: ['delet', 'prune', 'snap'],
+    permissions: ["MANAGE_MESSAGES", "KICK_MEMBERS", "BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'restore balance in the universe',
     async execute(client, msg, args, Discord) {
         if(!args[0])
