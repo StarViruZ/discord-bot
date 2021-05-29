@@ -4,6 +4,7 @@ const ytSearch = require('yt-search');
 module.exports = {
     name: 'play',
     cooldown: 5,
+    permissions: [],
     description: 'play shit in youtube lol!',
     async execute(client, msg, args, Discord) {
         const voiceChannel = msg.member.voice.channel;

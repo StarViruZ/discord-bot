@@ -7,8 +7,14 @@ const cooldowns = new Map();
 module.exports = (Discord, client, msg) => {
     const prefix = config.prefix;
 
+    // -- 'OK' -- //
     if (msg.content.toLowerCase() == 'ok' && !msg.author.bot) {
         client.commands.get('ok').execute(client, msg, null, Discord);
+        return;
+    }
+    if (msg.content.toLowerCase().includes('cdn.discordapp.com/emojis'.toLowerCase()) && !msg.author.bot) {
+        msg.delete();
+        msg.reply('No copy-pasting discord emotes, get some nitro broke-ass :rage:');
         return;
     }
     if(!msg.content.startsWith(prefix) || msg.author.bot)
@@ -19,7 +25,6 @@ module.exports = (Discord, client, msg) => {
 
     const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-    
     if (command.name === 'ok') return;
     // Comment this if you don't need embeds since it should be uncommented in the main.js
     if (command.name === 'reaction-roles') return;
