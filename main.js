@@ -8,6 +8,7 @@ const memberCounter = require('./counters/member-counter');
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
+client.snipes = new Discord.Collection(); // To save sniped messages
 
 client.once('ready', () => {
     console.log('Alive bot');
