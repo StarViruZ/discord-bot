@@ -11,5 +11,7 @@ node_modules/discord.js/src/util/*
 #in order to keep token safe
 config.json
 
-#old main file not needed
+#old files
 main.old.js
+commands/music_leave.old.js
+commands/music_play.old.js

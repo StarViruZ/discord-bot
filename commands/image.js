@@ -9,6 +9,7 @@ const google = new Scraper({
 module.exports = {
     name: 'image',
     aliases: ['img', 'pic', 'google'],
+    permissions: [],
     cooldown: 10,
     description: 'search a random ass pic',
     async execute(msg, args, cmd, client, Discord){

@@ -8,6 +8,7 @@ module.exports = {
     name: 'play',
     aliases: ['skip', 'stop'], //We are using aliases to run the skip and stop command follow this tutorial if lost: https://www.youtube.com/watch?v=QBUJ3cdofqc
     cooldown: 0,
+    permissions: [],
     description: 'Advanced music bot',
     async execute(msg, args, cmd, client, Discord){
 
@@ -20,7 +21,7 @@ module.exports = {
         if (!permissions.has('CONNECT'))
             return msg.channel.send('Rip I can\'t enter to this channel :/');
         if (!permissions.has('SPEAK')) 
-            return msg.channel.send('Bitch first remove the flex tape on my mouth >:(');
+            return msg.channel.send('Bitch first remove the flex tape on your mouth >:(');
 
         // Server queue aka global queue in all servers.
         const server_queue = queue.get(msg.guild.id);
@@ -78,7 +79,7 @@ module.exports = {
                 }
             } else {
                 server_queue.songs.push(song);
-                return msg.channel.send(`ᴘʟᴀʏɪɴɢ: **${song.title}**`);
+                return msg.channel.send(`ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ ǫᴜᴇᴜᴇ: **${song.title}**`);
             }
         }
 
@@ -108,7 +109,7 @@ const video_player = async (guild, song) => {
         song_queue.songs.shift();
         video_player(guild, song_queue.songs[0]);
     });
-    await song_queue.text_channel.send(`ɴᴇxᴛ ɪɴ ᴛʜᴇ ǫᴜᴇᴜᴇ: **${song.title}**`);
+    await song_queue.text_channel.send(`ɴᴏᴡ ᴘʟᴀʏɪɴɢ: **${song.title}**`);
 }
 
 const skip_song = (msg, server_queue) => {
