@@ -91,6 +91,8 @@ module.exports = {
     
 }
 
+// Outside methods
+
 const video_player = async (guild, song) => {
     const song_queue = queue.get(guild.id);
 
