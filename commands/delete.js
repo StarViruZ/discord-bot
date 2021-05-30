@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['delet', 'prune', 'snap'],
     permissions: ["MANAGE_MESSAGES", "KICK_MEMBERS", "BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'restore balance in the universe',
-    async execute(client, msg, args, Discord) {
+    async execute(msg, args, cmd, client, Discord) {
         if(!args[0])
             return msg.reply('Better tell me how many messages should I clear bruh');
         if(isNaN(args[0]))

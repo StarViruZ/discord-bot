@@ -11,7 +11,7 @@ module.exports = {
     aliases: ['img', 'pic', 'google'],
     cooldown: 10,
     description: 'search a random ass pic',
-    async execute(client, msg, args){
+    async execute(msg, args, cmd, client, Discord){
         const query = args.join(' ');
         if(!query)
             return msg.channel.send('Searching nothing... Found 0 results! (no shit...)');

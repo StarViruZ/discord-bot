@@ -15,7 +15,9 @@ client.once('ready', () => {
     
     // This should be running right away to keep the reaction roles working
     // Also the embed code should be commented to prevent unnecesary spam
-    client.commands.get('reaction-roles').execute(client, null, null, Discord);
+    client.commands.get('reaction-roles').execute(null, null, null, client, Discord);
+
+    
 
     const arrayOfStatus = [
         `In ${client.guilds.cache.size} servers`,

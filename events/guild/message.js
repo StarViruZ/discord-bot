@@ -9,7 +9,7 @@ module.exports = (Discord, client, msg) => {
 
     // -- 'OK' -- //
     if (msg.content.toLowerCase() == 'ok' && !msg.author.bot) {
-        client.commands.get('ok').execute(client, msg, null, Discord);
+        client.commands.get('ok').execute(msg, null, cmd, client, Discord);
         return;
     }
     if (msg.content.toLowerCase().includes('cdn.discordapp.com/emojis'.toLowerCase()) && !msg.author.bot) {
@@ -102,7 +102,7 @@ module.exports = (Discord, client, msg) => {
 
 
     try {
-        command.execute(client, msg, args, Discord);
+        command.execute(msg, args, cmd, client, Discord);
     } catch (err) {
         msg.channel.send("Uh oh, stinky error happened :o");
         console.log(err);

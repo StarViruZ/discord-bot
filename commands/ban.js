@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['bonk', 'hammer'],
     permissions: ["BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'kill these mfs outta existence',
-    execute(client, msg, args, Discord) {
+    execute(msg, args, cmd, client, Discord) {
         const member = msg.mentions.users.first();
 
         if (member) {

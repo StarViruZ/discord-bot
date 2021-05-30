@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['shut', 'silence'],
     permissions: ["KICK_MEMBERS", "BAN_MEMBERS", "ADMINISTRATOR"],
     description: 'shut that mf',
-    async execute(client, msg, args, Discord) {
+    async execute(msg, args, cmd, client, Discord) {
         const member = msg.mentions.users.first();
 
         if (member) {

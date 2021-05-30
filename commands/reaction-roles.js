@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['roles'],
     permissions: ["ADMINISTRATOR"],
     description: 'React to set a stupid role',
-    async execute(client, msg, args, Discord) {
+    async execute(msg, args, cmd, client, Discord) {
         // console.log('Running reaction roles command');
         const rolesChannel = '846146613004206130';
         const nsfwChannel = '846931197203578881';

@@ -6,7 +6,7 @@ module.exports = {
     cooldown: 5,
     permissions: ["MANAGE_ROLES", "ADMINISTRATOR"],
     description: 'become one even though you always were one',
-    execute(client, msg, args, Discord) {
+    execute(msg, args, cmd, client, Discord) {
 
         const targetUsr = msg.mentions.users.first();
 

@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['yeet', 'boot'],
     permissions: ["KICK_MEMBERS", "ADMINISTRATOR"],
     description: 'yeet these mfs',
-    execute(client, msg, args, Discord) {
+    execute(msg, args, cmd, client, Discord) {
         const member = msg.mentions.users.first();
 
         if (member) {
