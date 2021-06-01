@@ -9,7 +9,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
         .setAuthor(message.author, message.member.user.displayAvatarURL())
         .setDescription(message.content)
-        .setFooter('Get Sniped lol')
+        .setFooter('Get noscoped lol!')
         .setTimestamp();
         msg.channel.send(embed);
     }

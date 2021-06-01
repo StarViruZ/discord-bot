@@ -6,4 +6,14 @@ module.exports = (Discord, client, msg) => {
         member: msg.member,
         image: msg.attachments.first() ? msg.attachments.first().proxyURL : null
     });
+
+    const targetUsr = msg.mentions.users.first();
+    if(targetUsr) {
+        const embed = new Discord.MessageEmbed()
+        .setAuthor('Ghost ping detected!', 'https://icons.iconarchive.com/icons/google/noto-emoji-smileys/1024/10100-ghost-icon.png')
+        .setDescription(msg.content)
+        .setFooter(`Idiot pinger: ${msg.author.tag}`)
+        .setTimestamp();
+        msg.channel.send(embed);
+    }
 }
