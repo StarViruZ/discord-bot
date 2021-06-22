@@ -12,6 +12,22 @@ module.exports = (Discord, client, msg) => {
         client.commands.get('ok').execute(msg, null, null, client, Discord);
         return;
     }
+    if (msg.content.toLowerCase() == 'okay' && !msg.author.bot) {
+        client.commands.get('ok').execute(msg, null, null, client, Discord);
+        return;
+    }
+    var msgOK = msg.content.toLowerCase() + '';
+    msgOK = msgOK.replace(' ', '').replace('.', '');
+    if (msgOK == 'ok' && !msg.author.bot) {
+        client.commands.get('ok').execute(msg, null, null, client, Discord);
+        return;
+    }
+    if (msgOK == 'okay' && !msg.author.bot) {
+        client.commands.get('ok').execute(msg, null, null, client, Discord);
+        return;
+    }
+
+    // Check if some broke ass is copypasting emotes
     if (msg.content.toLowerCase().includes('cdn.discordapp.com/emojis'.toLowerCase()) && !msg.author.bot) {
         msg.delete();
         msg.reply('No copy-pasting discord emotes, get some nitro broke-ass :rage:');
