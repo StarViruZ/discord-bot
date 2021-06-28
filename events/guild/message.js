@@ -1,11 +1,12 @@
 const { permissions } = require('../../commands/ban');
-const config = require('../../config.json');
+// const config = require('../../config.json');
 
 const cooldowns = new Map();
 
 
 module.exports = (Discord, client, msg) => {
-    const prefix = config.prefix;
+    // const prefix = config.prefix; // Run this on the PC
+    const prefix = process.env.prefix; // Run this from Heroku
 
     // -- 'OK' -- //
     if (msg.content.toLowerCase() == 'ok' && !msg.author.bot) {
