@@ -1,5 +1,6 @@
-const { permissions } = require('../../commands/ban');
 // const config = require('../../config.json');
+
+const { permissions } = require('../../commands/ban');
 
 const cooldowns = new Map();
 

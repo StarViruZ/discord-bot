@@ -1,4 +1,4 @@
-// const config = require('./config.json');
+// const config = require('./config.json'); // Uncomment if you are gonna run locally
 
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
@@ -52,8 +52,8 @@ client.once('ready', () => {
 
 // -- Login -- //
 
-// client.login(config.token); // Run this while on PC
-client.login(process.env.token); // Run this from Heroku
+// client.login(config.token); // Run this while on PC/locally
+client.login(process.env.token); // Running this from Heroku
 
 
 // client.destroy();
