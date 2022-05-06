@@ -15,3 +15,4 @@ config.json
 main.old.js
 commands/music_leave.old.js
 commands/music_play.old.js
+commands/reaction-roles.js
